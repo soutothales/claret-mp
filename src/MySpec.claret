@@ -1,0 +1,100 @@
+/*
+ * This is an example claret specification
+ */
+systemName "SYSTEM_NAME"
+
+usecase "First Use Case" {
+	version "0.1" type "set_type" user "set_user" date "set_date"
+	actor person "user"
+	
+	preCondition "usuario logado"
+	
+	basic {
+		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
+		step 2 system "restaurante está aberto"
+		step 3 person "comida escolhida pelo cardapio"
+		step 4 system "comida disponível"
+		step 5 person "compra em dinheiro"
+		step 6 system "sistema confirma compra"
+	}
+	
+	alternative 1 "comida não disponivel" {
+		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
+		step 2 system "restaurante está aberto"
+		step 3 person "comida escolhida pelo cardapio"
+		step 4 system "comida não disponível"
+	}
+	
+	alternative 2 "compra cancelada" {
+		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
+		step 2 system "restaurante está aberto"
+		step 3 person "comida escolhida pelo cardapio"
+		step 4 system "comida disponível"
+		step 5 person "cancelar compra"
+		step 6 system "compra cancelada com sucesso"
+	}
+	
+	alternative 3 "compra não autorizada" {
+		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
+		step 2 system "restaurante está aberto"
+		step 3 person "comida escolhida pelo cardapio"
+		step 4 system "comida disponível"
+		step 5 person "compra no cartão"
+		step 6 system "compra não autorizada"
+	}
+	
+	alternative 4 "realizada compra com dinheiro" {
+		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
+		step 2 system "restaurante está aberto"
+		step 3 person "comida escolhida pelo histórico de compras realizadas"
+		step 4 system "comida disponível"
+		step 5 person "compra no dinheiro"
+		step 6 system "compra realizada com sucesso"
+	}
+	
+	alternative 5 "restaurante fechado" {
+		step 1 person "Escolhe restaurante na lista de restaurantes favoritos"
+		step 2 system "restaurante está fechado"
+	}
+	
+	alternative 6 "comida historico sucesso" {
+		step 1 person "Escolhe restaurante na lista de restaurantes favoritos"
+		step 2 system "restaurante está aberto"
+		step 3 person "comida escolhida pelo histórico de compras realizadas"
+		step 4 system "comida disponível"
+		step 5 person "compra no dinheiro"
+		step 6 system "compra realizada com sucesso"
+	}
+	
+	alternative 7 "restaurante favorito" {
+		step 1 person "Escolhe restaurante na lista de restaurantes favoritos"
+		step 2 system "restaurante está aberto"
+		step 3 person "comida escolhida pelo histórico de compras realizadas"
+		step 4 system "comida disponível"
+		step 5 person "compra no dinheiro"
+		step 6 system "compra realizada com sucesso"
+	}
+	
+	alternative 8 "restaurante favorito do cardapio" {
+		step 1 person "Escolhe restaurante na lista de restaurantes favoritos"
+		step 2 system "restaurante está aberto"
+		step 3 person "comida escolhida pelo cardápio"
+		step 4 system "comida disponível"
+		step 5 person "compra no cartão"
+		step 6 system "compra realizada com sucesso"
+	}
+	
+	alternative 9 "comida cardapio sucesso" {
+		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
+		step 2 system "restaurante está aberto"
+		step 3 person "comida escolhida pelo cardápio"
+		step 4 system "comida disponível"
+		step 5 person "compra no cartão"
+		step 6 system "compra realizada com sucesso"
+	}
+	
+	// Exceptions scenarios here...
+	
+	postCondition "final condition", "other condition"
+}
+
