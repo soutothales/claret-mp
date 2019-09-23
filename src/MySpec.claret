@@ -3,6 +3,8 @@
  */
 systemName "FOOD-APP"
 
+maxTestCaseSize 4
+
 usecase "Primeira Compra do Cliente" {
 	version "0.1" type "set_type" user "set_user" date "set_date"
 	actor person "Cliente"
@@ -10,7 +12,7 @@ usecase "Primeira Compra do Cliente" {
 	preCondition "Cliente logado no sistema."
 	
 	basic {
-		step 1 person "Escolhe restaurante na lista de restaurantes." af[1,2]
+		step 1 person "Escolhe restaurante na lista de restaurantes." af[1,2] 
 		step 2 system "Exibe o cardápio do restaurante escolhido." ef[3]
 		step 3 person "Seleciona uma opção de refeição do cardápio." af[3]
 		step 4 system "Exibe o valor e os meios de pagamento disponíveis." ef[1]

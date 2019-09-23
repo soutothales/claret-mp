@@ -1,98 +1,377 @@
 /**
  *	 >>> REDUCED TEST SUITE (Greedy Heuristic - Transition Pair Coverage) <<<
  *
- * - Calculated Maximum Test Case Size: 3
+ * - Informed Maximum Test Case Size: 4
  *
- * - Equation:
- *
- *     maxTestCaseSize = (b + max(a, e))/2
- * 
- *     where:
- *       b (Total of Basic Flow Steps): 6
- *       a (Total of Steps from Greater Alternative Flow): 1
- *       e (Total of Steps from Greater Exception Flow): 1
- *
- * - Total of Generated Test Cases: 12
+ * - Total of Generated Test Cases: 48
  */
 
 Test Case: 1
 Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
 Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
 Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
-Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
 Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
 
 Test Case: 2
 Precondition: Cliente logado no sistema.
-Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
-Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
 Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
 Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
 
 Test Case: 3
 Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
 Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
-Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
-Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
 Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
 
 Test Case: 4
 Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
 Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
-Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
 Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
 Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
 
 Test Case: 5
 Precondition: Cliente logado no sistema.
-Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
 Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
 Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
 Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
 
 Test Case: 6
 Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 7
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
 Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
 Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
 Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
 Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
 
-Test Case: 7
+Test Case: 8
 Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
 Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
 Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
 Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
 Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
 
-Test Case: 8
-Precondition: Cliente logado no sistema.
-Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
-Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
-Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
-Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
-
 Test Case: 9
 Precondition: Cliente logado no sistema.
-Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
 Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
 Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
 Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
 
 Test Case: 10
 Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 11
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 12
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 13
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 14
+Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 15
+Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
 Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
 Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
 Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
 Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
 
-Test Case: 11
+Test Case: 16
+Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 17
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 18
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 19
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 20
+Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 21
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 22
+Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 23
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 24
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 25
 Precondition: Cliente logado no sistema.
 Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
 Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
 Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
 Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
 
-Test Case: 12
+Test Case: 26
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 27
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 28
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 29
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 30
+Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 31
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 32
+Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 33
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 34
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 35
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 36
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 37
+Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 38
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 39
+Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 40
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 41
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 42
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 43
+Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 44
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 45
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe um restaurante dos últimos comprados -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 46
+Precondition: Cliente logado no sistema.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Escolhe uma refeição das últimas listas de compras -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Escolhe realizar o pagamento em dinheiro -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 47
+Precondition: Cliente logado no sistema.
+Cliente Escolhe um restaurante da lista de favoritos -> SYSTEM Informa que o restaurante escolhido está fechado no momento.
+Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
+Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
+Cliente Realiza o pagamento no cartão. -> SYSTEM Informa que o pedido foi realizado com sucesso.
+Postcondition: O sistema notifica o restaurante sobre o pedido do cliente.
+
+Test Case: 48
 Precondition: Cliente logado no sistema.
 Cliente Escolhe restaurante na lista de restaurantes. -> SYSTEM Exibe o cardápio do restaurante escolhido.
 Cliente Seleciona uma opção de refeição do cardápio. -> SYSTEM Exibe o valor e os meios de pagamento disponíveis.
