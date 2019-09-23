@@ -1,0 +1,55 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+18 18
+19 19
+20 20
+21 21
+22 22
+23 23
+24 24
+#
+1 10 conditions
+10 2 Cliente logado no sistema.
+2 11 steps
+11 3 Cliente Escolhe restaurante na lista de restaurantes.
+3 12 expected_results
+12 4 system Exibe o cardápio do restaurante escolhido.
+4 13 steps
+13 5 Cliente Seleciona uma opção de refeição do cardápio.
+5 14 expected_results
+14 6 system Exibe o valor e os meios de pagamento disponíveis.
+6 15 steps
+15 7 Cliente Realiza o pagamento no cartão.
+7 16 expected_results
+16 8 system Informa que o pedido foi realizado com sucesso.
+8 17 conditions
+17 9 O sistema notifica o restaurante sobre o pedido do cliente.
+2 18 steps
+18 3 Cliente Escolhe um restaurante da lista de favoritos
+2 19 steps
+19 3 Cliente Escolhe um restaurante dos últimos comprados
+3 20 expected_results
+20 2 system Informa que o restaurante escolhido está fechado no momento.
+4 21 steps
+21 5 Cliente Escolhe uma refeição das últimas listas de compras
+5 22 expected_results
+22 3 system Informa que a refeição não está disponível no momento
+6 23 steps
+23 7 Cliente Escolhe realizar o pagamento em dinheiro
+7 24 expected_results
+24 5 system Informa que a compra não foi autorizada pelo cartão.

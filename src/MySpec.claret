@@ -1,100 +1,55 @@
 /*
  * This is an example claret specification
  */
-systemName "SYSTEM_NAME"
+systemName "FOOD-APP"
 
-usecase "First Use Case" {
+usecase "Primeira Compra do Cliente" {
 	version "0.1" type "set_type" user "set_user" date "set_date"
-	actor person "user"
+	actor person "Cliente"
 	
-	preCondition "usuario logado"
+	preCondition "Cliente logado no sistema."
 	
 	basic {
-		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
-		step 2 system "restaurante está aberto"
-		step 3 person "comida escolhida pelo cardapio"
-		step 4 system "comida disponível"
-		step 5 person "compra em dinheiro"
-		step 6 system "sistema confirma compra"
+		step 1 person "Escolhe restaurante na lista de restaurantes." af[1,2]
+		step 2 system "Exibe o cardápio do restaurante escolhido." ef[3]
+		step 3 person "Seleciona uma opção de refeição do cardápio." af[3]
+		step 4 system "Exibe o valor e os meios de pagamento disponíveis." ef[1]
+		step 5 person "Realiza o pagamento no cartão." af[4]
+		step 6 system "Informa que o pedido foi realizado com sucesso." ef[2]
 	}
 	
-	alternative 1 "comida não disponivel" {
-		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
-		step 2 system "restaurante está aberto"
-		step 3 person "comida escolhida pelo cardapio"
-		step 4 system "comida não disponível"
+	// Alternative flows
+	alternative 1 "restaurantes favoritos" {
+		step 1 person "Escolhe um restaurante da lista de favoritos" bs 2
 	}
 	
-	alternative 2 "compra cancelada" {
-		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
-		step 2 system "restaurante está aberto"
-		step 3 person "comida escolhida pelo cardapio"
-		step 4 system "comida disponível"
-		step 5 person "cancelar compra"
-		step 6 system "compra cancelada com sucesso"
+	alternative 2 "ultimos restaurantes" {
+		step 1 person "Escolhe um restaurante dos últimos comprados" bs 2
 	}
 	
-	alternative 3 "compra não autorizada" {
-		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
-		step 2 system "restaurante está aberto"
-		step 3 person "comida escolhida pelo cardapio"
-		step 4 system "comida disponível"
-		step 5 person "compra no cartão"
-		step 6 system "compra não autorizada"
+	alternative 3 "ultimos pratos" {
+		step 1 person "Escolhe uma refeição das últimas listas de compras" bs 4
 	}
 	
-	alternative 4 "realizada compra com dinheiro" {
-		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
-		step 2 system "restaurante está aberto"
-		step 3 person "comida escolhida pelo histórico de compras realizadas"
-		step 4 system "comida disponível"
-		step 5 person "compra no dinheiro"
-		step 6 system "compra realizada com sucesso"
+	alternative 4 "pagamento em dinheiro" {
+		step 1 person "Escolhe realizar o pagamento em dinheiro" bs 6
 	}
 	
-	alternative 5 "restaurante fechado" {
-		step 1 person "Escolhe restaurante na lista de restaurantes favoritos"
-		step 2 system "restaurante está fechado"
+	
+	
+	// Exceptions	
+	exception 1 "refeição não disponível." {
+		step 1 system "Informa que a refeição não está disponível no momento" bs 2
 	}
 	
-	alternative 6 "comida historico sucesso" {
-		step 1 person "Escolhe restaurante na lista de restaurantes favoritos"
-		step 2 system "restaurante está aberto"
-		step 3 person "comida escolhida pelo histórico de compras realizadas"
-		step 4 system "comida disponível"
-		step 5 person "compra no dinheiro"
-		step 6 system "compra realizada com sucesso"
+	exception 2 "compra não autorizada" {
+		step 1 system "Informa que a compra não foi autorizada pelo cartão." bs 4
 	}
 	
-	alternative 7 "restaurante favorito" {
-		step 1 person "Escolhe restaurante na lista de restaurantes favoritos"
-		step 2 system "restaurante está aberto"
-		step 3 person "comida escolhida pelo histórico de compras realizadas"
-		step 4 system "comida disponível"
-		step 5 person "compra no dinheiro"
-		step 6 system "compra realizada com sucesso"
+	exception 3 "restaurante fechado" {
+		step 1 system "Informa que o restaurante escolhido está fechado no momento." bs 1
 	}
 	
-	alternative 8 "restaurante favorito do cardapio" {
-		step 1 person "Escolhe restaurante na lista de restaurantes favoritos"
-		step 2 system "restaurante está aberto"
-		step 3 person "comida escolhida pelo cardápio"
-		step 4 system "comida disponível"
-		step 5 person "compra no cartão"
-		step 6 system "compra realizada com sucesso"
-	}
-	
-	alternative 9 "comida cardapio sucesso" {
-		step 1 person "Escolhe restaurante na lista de restaurantes abertos"
-		step 2 system "restaurante está aberto"
-		step 3 person "comida escolhida pelo cardápio"
-		step 4 system "comida disponível"
-		step 5 person "compra no cartão"
-		step 6 system "compra realizada com sucesso"
-	}
-	
-	// Exceptions scenarios here...
-	
-	postCondition "final condition", "other condition"
+	postCondition "O sistema notifica o restaurante sobre o pedido do cliente."
 }
 
